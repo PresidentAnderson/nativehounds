@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Native Hounds - E-commerce Store
+
+A modern e-commerce platform for native hound breed products, built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Product Catalog**: Browse products by category with filtering
+- **Shopping Cart**: Add products to cart with quantity management
+- **Checkout Flow**: Simple checkout process with order confirmation
+- **Responsive Design**: Mobile-friendly interface
+- **Image Optimization**: Next.js Image component with Unsplash placeholders
+- **Type Safety**: Full TypeScript support
+- **State Management**: React Context for cart functionality
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Netlify
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 20 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd nativehounds
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+nativehounds/
+├── app/                      # Next.js app directory
+│   ├── cart/                # Cart page
+│   ├── checkout/            # Checkout and success pages
+│   ├── products/            # Product listing and detail pages
+│   ├── layout.tsx           # Root layout with providers
+│   └── page.tsx             # Home page
+├── components/              # React components
+│   ├── layout/             # Header, Footer
+│   └── products/           # ProductCard
+├── lib/                    # Utilities and data
+│   ├── context/           # React Context (CartContext)
+│   ├── data/              # Mock product data
+│   └── utils/             # Helper functions
+├── types/                 # TypeScript type definitions
+└── public/                # Static assets
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy to Netlify
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Via Netlify CLI**:
+```bash
+npm install -g netlify-cli
+npm run build
+netlify deploy --prod
+```
+
+2. **Via GitHub Integration**:
+   - Push your code to GitHub
+   - Connect your repository to Netlify
+   - Netlify will automatically detect the Next.js framework
+   - Build settings are configured in `netlify.toml`
+
+3. **Build Settings** (already configured in netlify.toml):
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+   - Node version: 20
+
+### Deploy to Vercel (Alternative)
+
+```bash
+npm install -g vercel
+vercel
+```
+
+## Environment Variables
+
+Currently, the app uses mock data and doesn't require environment variables. For a production application, you would add:
+
+```env
+NEXT_PUBLIC_API_URL=your-api-url
+STRIPE_PUBLIC_KEY=your-stripe-key
+DATABASE_URL=your-database-url
+```
+
+## Customization
+
+### Adding Products
+
+Edit `lib/data/products.ts` to add or modify products:
+
+```typescript
+{
+  id: '7',
+  name: 'Your Product Name',
+  description: 'Product description',
+  price: 29.99,
+  image: 'https://images.unsplash.com/photo-id',
+  category: 'food', // or 'toys', 'accessories', etc.
+  stock: 100,
+  featured: false,
+}
+```
+
+### Styling
+
+The project uses Tailwind CSS. Modify:
+- `tailwind.config.ts` for theme customization
+- `app/globals.css` for global styles
+- Color scheme uses amber/brown tones - search for `amber` in components to change
+
+### Categories
+
+Product categories are defined in `types/index.ts`:
+- food
+- toys
+- accessories
+- health
+- training
+- bedding
+
+## Features to Add
+
+This is a demo e-commerce store. For production use, consider adding:
+
+- [ ] Real payment processing (Stripe, PayPal)
+- [ ] User authentication (NextAuth.js)
+- [ ] Database integration (PostgreSQL, MongoDB)
+- [ ] Order management system
+- [ ] Email notifications
+- [ ] Product reviews and ratings
+- [ ] Search functionality
+- [ ] Wishlist feature
+- [ ] Admin dashboard
+- [ ] Analytics integration
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is created for demonstration purposes.
+
+## Support
+
+For issues or questions, please create an issue in the repository.
