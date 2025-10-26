@@ -32,7 +32,7 @@ export default function CheckoutSuccessPage() {
         <div className="space-x-4">
           <Link
             href="/products"
-            className="inline-block bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-800 transition"
+            className="inline-block bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-800 transition"
           >
             Continue Shopping
           </Link>

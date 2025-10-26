@@ -20,7 +20,7 @@ export function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           {product.featured && (
-            <div className="absolute top-2 right-2 bg-amber-600 text-white text-xs px-2 py-1 rounded">
+            <div className="absolute top-2 right-2 bg-pink-600 text-white text-xs px-2 py-1 rounded">
               Featured
             </div>
           )}
@@ -33,7 +33,7 @@ export function ProductCard({ product }: ProductCardProps) {
             {product.description}
           </p>
           <div className="flex items-center justify-between">
-            <span className="text-lg font-bold text-amber-700">
+            <span className="text-lg font-bold text-pink-700">
               {formatPrice(product.price)}
             </span>
             {product.stock > 0 ? (

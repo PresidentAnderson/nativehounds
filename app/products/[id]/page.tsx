@@ -25,7 +25,7 @@ export default function ProductDetailPage() {
         </h1>
         <Link
           href="/products"
-          className="text-amber-700 hover:text-amber-900"
+          className="text-pink-700 hover:text-pink-900"
         >
           Back to Products
         </Link>
@@ -44,7 +44,7 @@ export default function ProductDetailPage() {
       <div className="container mx-auto px-4">
         <Link
           href="/products"
-          className="text-amber-700 hover:text-amber-900 mb-6 inline-block"
+          className="text-pink-700 hover:text-pink-900 mb-6 inline-block"
         >
           ← Back to Products
         </Link>
@@ -65,7 +65,7 @@ export default function ProductDetailPage() {
           {/* Product Details */}
           <div className="flex flex-col">
             <div className="mb-2">
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full">
+              <span className="inline-block bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">
                 {product.category.toUpperCase()}
               </span>
             </div>
@@ -74,7 +74,7 @@ export default function ProductDetailPage() {
               {product.name}
             </h1>
 
-            <div className="text-3xl font-bold text-amber-700 mb-6">
+            <div className="text-3xl font-bold text-pink-700 mb-6">
               {formatPrice(product.price)}
             </div>
 
@@ -130,7 +130,7 @@ export default function ProductDetailPage() {
                 {/* Add to Cart Button */}
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-amber-700 text-white py-4 rounded-lg font-semibold hover:bg-amber-800 transition flex items-center justify-center space-x-2"
+                  className="w-full bg-pink-700 text-white py-4 rounded-lg font-semibold hover:bg-pink-800 transition flex items-center justify-center space-x-2"
                 >
                   {added ? (
                     <>

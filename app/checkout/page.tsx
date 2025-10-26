@@ -72,7 +72,7 @@ export default function CheckoutPage() {
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                   />
                 </div>
 
@@ -90,7 +90,7 @@ export default function CheckoutPage() {
                     required
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                   />
                 </div>
 
@@ -109,7 +109,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.city}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     />
                   </div>
 
@@ -127,7 +127,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.state}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.zipCode}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     />
                   </div>
 
@@ -164,7 +164,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.country}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     >
                       <option value="United States">United States</option>
                       <option value="Canada">Canada</option>
@@ -177,7 +177,7 @@ export default function CheckoutPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Payment Information
                 </h2>
-                <p className="text-gray-600 bg-amber-50 p-4 rounded-lg border border-amber-200">
+                <p className="text-gray-600 bg-pink-50 p-4 rounded-lg border border-amber-200">
                   This is a demo store. No actual payment will be processed.
                   Click "Place Order" to simulate a successful order.
                 </p>
@@ -186,7 +186,7 @@ export default function CheckoutPage() {
               <button
                 type="submit"
                 disabled={isProcessing}
-                className="w-full bg-amber-700 text-white py-3 rounded-lg font-semibold hover:bg-amber-800 transition mt-6 disabled:bg-gray-400"
+                className="w-full bg-pink-700 text-white py-3 rounded-lg font-semibold hover:bg-pink-800 transition mt-6 disabled:bg-gray-400"
               >
                 {isProcessing ? 'Processing...' : 'Place Order'}
               </button>

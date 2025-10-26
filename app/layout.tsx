@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Native Hounds - Premium Products for Native Dog Breeds",
-  description: "Quality products for native hound breeds. Food, toys, accessories, and more.",
+  title: "Chez Cockette - Pet Grooming & Products in Rio de Janeiro",
+  description: "Premium pet grooming services and products for tourists in Rio de Janeiro. Professional grooming, spa treatments, and quality pet supplies.",
 };
 
 export default function RootLayout({

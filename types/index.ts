@@ -20,6 +20,24 @@ export type ProductCategory =
   | 'training'
   | 'bedding';
 
+// Service types
+export interface GroomingService {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  duration: string;
+  image: string;
+  category: ServiceCategory;
+  popular?: boolean;
+}
+
+export type ServiceCategory =
+  | 'grooming'
+  | 'spa'
+  | 'daycare'
+  | 'training';
+
 // Cart types
 export interface CartItem {
   product: Product;
@@ -29,6 +47,24 @@ export interface CartItem {
 export interface Cart {
   items: CartItem[];
   total: number;
+}
+
+// Booking types
+export interface ServiceBooking {
+  id: string;
+  service: GroomingService;
+  date: Date;
+  time: string;
+  petName: string;
+  petType: 'dog' | 'cat';
+  contactInfo: ContactInfo;
+}
+
+export interface ContactInfo {
+  name: string;
+  email: string;
+  phone: string;
+  hotelName?: string;
 }
 
 // Order types

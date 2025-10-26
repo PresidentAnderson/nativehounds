@@ -22,7 +22,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/products"
-            className="inline-block bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-800 transition"
+            className="inline-block bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-800 transition"
           >
             Continue Shopping
           </Link>
@@ -59,7 +59,7 @@ export default function CartPage() {
                     <div className="flex-1">
                       <Link
                         href={`/products/${item.product.id}`}
-                        className="text-lg font-semibold text-gray-900 hover:text-amber-700"
+                        className="text-lg font-semibold text-gray-900 hover:text-pink-700"
                       >
                         {item.product.name}
                       </Link>
@@ -142,14 +142,14 @@ export default function CartPage() {
 
               <Link
                 href="/checkout"
-                className="block w-full bg-amber-700 text-white py-3 rounded-lg font-semibold hover:bg-amber-800 transition text-center"
+                className="block w-full bg-pink-700 text-white py-3 rounded-lg font-semibold hover:bg-pink-800 transition text-center"
               >
                 Proceed to Checkout
               </Link>
 
               <Link
                 href="/products"
-                className="block w-full text-center text-amber-700 hover:text-amber-900 mt-4 font-semibold"
+                className="block w-full text-center text-pink-700 hover:text-pink-900 mt-4 font-semibold"
               >
                 Continue Shopping
               </Link>
